@@ -8,11 +8,12 @@ import Login from './app/screens/LoginScreen';
 import Map from './app/screens/MapScreen';
 import Settings from './app/screens/SettingsScreen';
 import Drivers from './app/screens/DriversScreen';
+import User from './app/screens/UserScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Drivers/>
+      <User/>
     </View>
   );
 }
