@@ -10,6 +10,7 @@ import Settings from './app/screens/SettingsScreen';
 import Drivers from './app/screens/DriversScreen';
 import User from './app/screens/UserScreen';
 import CurrentDrive from './app/screens/CurrentDriveScreen';
+import Help from './app/screens/HelpScreen';
 
 export default function App() {
   return (
