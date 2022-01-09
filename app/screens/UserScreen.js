@@ -20,6 +20,18 @@ const opcije = [
   { id: 2, voznja: "Trg Heroja", vrijeme: "16:34" },
   { id: 3, voznja: "Review - Hamo Mirzić", vrijeme: "12:41" },
   { id: 4, voznja: "Skenderija", vrijeme: "21:21" },
+  { id: 5, voznja: "Grand Hotel", vrijeme: "07:00" },
+  { id: 6, voznja: "Trg Heroja", vrijeme: "16:34" },
+  { id: 7, voznja: "Review - Hamo Mirzić", vrijeme: "12:41" },
+  { id: 8, voznja: "Skenderija", vrijeme: "21:21" },
+  { id: 9, voznja: "Grand Hotel", vrijeme: "07:00" },
+  { id: 10, voznja: "Trg Heroja", vrijeme: "16:34" },
+  { id: 11, voznja: "Review - Hamo Mirzić", vrijeme: "12:41" },
+  { id: 12, voznja: "Skenderija", vrijeme: "21:21" },
+  { id: 13, voznja: "Grand Hotel", vrijeme: "07:00" },
+  { id: 14, voznja: "Trg Heroja", vrijeme: "16:34" },
+  { id: 15, voznja: "Review - Hamo Mirzić", vrijeme: "12:41" },
+  { id: 16, voznja: "Skenderija", vrijeme: "21:21" },
 ];
 
 const UserScreen = ({ navigation }) => {

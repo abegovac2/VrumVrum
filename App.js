@@ -9,11 +9,12 @@ import Map from './app/screens/MapScreen';
 import Settings from './app/screens/SettingsScreen';
 import Drivers from './app/screens/DriversScreen';
 import User from './app/screens/UserScreen';
+import CurrentDrive from './app/screens/CurrentDriveScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <User/>
+      <CurrentDrive/>
     </View>
   );
 }
