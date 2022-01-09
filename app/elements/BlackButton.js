@@ -4,11 +4,11 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 const colors = require("../color/colors.json");
 
 
-const BlackButton = ({ content }) => {
+const BlackButton = ({ content, onClick }) => {
     return (
         <View style={[styles.dugme, styles.crnoD]}>
-            <TouchableOpacity>
-              <Text style={{ color: colors.secondaryColor }}>{content}</Text>
+            <TouchableOpacity style={{width:"100%"}} onPress={onClick}>
+              <Text style={{ color: colors.secondaryColor, textAlign: "center" }}>{content}</Text>
             </TouchableOpacity>
           </View>
     )

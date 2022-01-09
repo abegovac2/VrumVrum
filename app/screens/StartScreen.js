@@ -20,7 +20,7 @@ const VerificationScreen = ({ navigation }) => {
     >
       <TouchableOpacity
         style={styles.redirect}
-        onPress={() => console.log("klikno1")}
+        onPress={() => navigation.navigate("Login")}
       >
         {/*ovdje samo redirect*/}
       </TouchableOpacity>

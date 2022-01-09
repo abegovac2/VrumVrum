@@ -23,9 +23,9 @@ const HelpScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.nav}>
-        <View>
+        <TouchableOpacity onPress={() => navigation.navigate("User")}>
           <Back width={20} height={20} color={colors.black}></Back>
-        </View>
+        </TouchableOpacity>
         <Text style={{ fontWeight: "bold" }}>Pomoć</Text>
         <View>
           <Menu width={20} height={20} color={colors.black}></Menu>
@@ -68,7 +68,7 @@ const HelpScreen = ({ navigation }) => {
           </View>
 
           <View style={styles.dugme}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("User")}>
               <Text style={{ color: colors.secondaryColor }}>Pošalji</Text>
             </TouchableOpacity>
           </View>
@@ -76,11 +76,7 @@ const HelpScreen = ({ navigation }) => {
       </View>
       <View style={{ position: "absolute", bottom: 0 }}>
         <MenuBar
-          homeAction={() => console.log("home")}
-          menuAction={() => console.log("menu")}
-          addAction={() => console.log("add")}
-          friendAction={() => console.log("friend")}
-          settigsAction={() => console.log("settings")}
+          navigation={navigation}
         ></MenuBar>
       </View>
     </View>

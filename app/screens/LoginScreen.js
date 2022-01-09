@@ -39,9 +39,9 @@ const HomeScreen = ({ navigation }) => {
         </View>
 
         <View style={{ flex: 3 }}>
-          <BlackButton content={"Login"}></BlackButton>
+          <BlackButton content={"Login"} onClick={() => navigation.navigate("User")}></BlackButton>
           <Text style={{ textAlign: "center", padding: 5 }}>Nemate račun?</Text>
-          <BlackButton content={"Prijavite se"}></BlackButton>
+          <BlackButton content={"Prijavite se"} onClick={() => navigation.navigate("Verification")}></BlackButton>
           <View
             style={[styles.dugme, styles.bijeloD, { alignItems: "flex-start" }]}
           >

@@ -42,7 +42,7 @@ const UserScreen = ({ navigation }) => {
           Korisnički profil
         </Text>
         <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity style={styles.izaberi}>
+          <TouchableOpacity onPress={() => navigation.navigate("Map")} style={styles.izaberi}>
             <Plus width={20} height={20} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.izaberi}>
@@ -73,7 +73,7 @@ const UserScreen = ({ navigation }) => {
             <User width={50} height={50} />
           </View>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>Meho Mehić</Text>
-          <Text>Sa Sališća, BiH</Text>
+          <Text>Sarajevo, BiH</Text>
           <View style={{ flexDirection: "row", margin: 10, marginTop: 70 }}>
             <TouchableOpacity
               style={{
@@ -127,11 +127,7 @@ const UserScreen = ({ navigation }) => {
       {/* za bottom meni */}
       <View style={{ position: "absolute", bottom: 0 }}>
         <MenuBar
-          homeAction={() => console.log("home")}
-          menuAction={() => console.log("menu")}
-          addAction={() => console.log("add")}
-          friendAction={() => console.log("friend")}
-          settigsAction={() => console.log("settings")}
+          navigation={navigation}
         ></MenuBar>
       </View>
     </View>

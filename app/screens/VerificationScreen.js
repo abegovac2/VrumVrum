@@ -7,6 +7,7 @@ import {
   TextInput,
 } from "react-native";
 import BlackButton from "../elements/BlackButton";
+import Back from "../svg/back-svgrepo-com.svg";
 
 import CarImage from "../svg/undraw_city_driver_re_0x5e.svg";
 const colors = require("../color/colors.json");
@@ -15,10 +16,11 @@ const VerificationScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.zaglavlje}>
-        <TouchableOpacity>
-          <Text style={styles.text}>{"<"}</Text>
+        <TouchableOpacity navigation={navigation}>
+          <Back width={20} height={20} color={colors.black}></Back>
         </TouchableOpacity>
         <Text style={styles.text}>Verifikacija računa</Text>
+        <View></View>
       </View>
       <View style={styles.sadrzaj}>
         <Text style={styles.text}>Unesite kod poslan na Vaš broj!</Text>
@@ -29,7 +31,10 @@ const VerificationScreen = ({ navigation }) => {
             keyboardType={"decimal-pad"}
           ></TextInput>
           <View>
-            <BlackButton content={"Pošalji kod"}></BlackButton>
+            <BlackButton
+              content={"Pošalji kod"}
+              onClick={() => navigation.navigate("User")}
+            ></BlackButton>
             <View style={[styles.dugme, styles.bijeloD]}>
               <TouchableOpacity>
                 <Text>Ponovo slanje na broj</Text>
@@ -53,7 +58,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "flex-start",
+    paddingTop: 40,
+    justifyContent: "space-evenly",
   },
   sadrzaj: {
     flex: 6,

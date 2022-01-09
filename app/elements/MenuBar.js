@@ -10,27 +10,23 @@ import Friends from "../svg/people-svgrepo-com.svg";
 const colors = require("../color/colors.json");
 
 const MenuBar = ({
-  homeAction,
-  menuAction,
-  addAction,
-  friendAction,
-  settigsAction,
+  navigation
 }) => {
   return (
     <View style={styles.menuBar}>
-      <TouchableOpacity onPress={homeAction} style={[styles.options, styles.size]}>
+      <TouchableOpacity onPress={() => navigation.navigate("CurrentDrive")} style={[styles.options, styles.size]}>
         <Home width={20} height={20} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={menuAction} style={[styles.options, styles.size]}>
+      <TouchableOpacity onPress={() => navigation.navigate("Drivers")}style={[styles.options, styles.size]}>
         <Menu width={20} height={20} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={addAction} style={[styles.plusOption, styles.size]}>
+      <TouchableOpacity onPress={() => navigation.navigate("Map")} style={[styles.plusOption, styles.size]}>
         <Plus width={40} height={40} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={friendAction} style={[styles.options, styles.size]}>
+      <TouchableOpacity onPress={() => navigation.navigate("User")} style={[styles.options, styles.size]}>
         <Friends width={20} height={20} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={settigsAction} style={[styles.options, styles.size]}>
+      <TouchableOpacity onPress={() => navigation.navigate("Settings")} style={[styles.options, styles.size]}>
         <Settings width={20} height={20} />
       </TouchableOpacity>
     </View>

@@ -22,43 +22,52 @@ import Profile from "../svg/profile-svgrepo-com.svg";
 
 const colors = require("../color/colors.json");
 const dim = { w: 20, h: 20 };
-const opcije = [
-  { id: 1, slika: <Lock width={dim.w} height={dim.h} />, text: "Privatnost" },
-  {
-    id: 2,
-    slika: <Paper width={dim.w} height={dim.h} />,
-    text: "Odredbe i uslovi",
-  },
-  { id: 3, slika: <Help width={dim.w} height={dim.h} />, text: "Pomoć" },
-  {
-    id: 4,
-    slika: <Pen width={dim.w} height={dim.h} />,
-    text: "Ostavljanje recenzije",
-  },
-  {
-    id: 5,
-    slika: <Dollar width={dim.w} height={dim.h} />,
-    text: "Historija plaćanja",
-  },
-  { id: 6, slika: <Bell width={dim.w} height={dim.h} />, text: "Notifikacije" },
-  {
-    id: 7,
-    slika: <Profile width={dim.w} height={dim.h} />,
-    text: "Korisnički račun",
-  },
-];
 
 const SettingsScreen = ({ navigation }) => {
+  const opcije = [
+    { id: 1, slika: <Lock width={dim.w} height={dim.h} />, text: "Privatnost" },
+    {
+      id: 2,
+      slika: <Paper width={dim.w} height={dim.h} />,
+      text: "Odredbe i uslovi",
+    },
+    {
+      id: 3,
+      slika: <Help width={dim.w} height={dim.h} />,
+      text: "Pomoć",
+      onPress: () => navigation.navigate("Help"),
+    },
+    {
+      id: 4,
+      slika: <Pen width={dim.w} height={dim.h} />,
+      text: "Ostavljanje recenzije",
+    },
+    {
+      id: 5,
+      slika: <Dollar width={dim.w} height={dim.h} />,
+      text: "Historija plaćanja",
+    },
+    {
+      id: 6,
+      slika: <Bell width={dim.w} height={dim.h} />,
+      text: "Notifikacije",
+    },
+    {
+      id: 7,
+      slika: <Profile width={dim.w} height={dim.h} />,
+      text: "Korisnički račun",
+    },
+  ];
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Back width={20} height={20} />
         </TouchableOpacity>
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
           Postavke računa
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Save width={20} height={20} />
         </TouchableOpacity>
       </View>
@@ -66,7 +75,11 @@ const SettingsScreen = ({ navigation }) => {
       <ScrollView style={{ width: "90%", marginLeft: 15, marginTop: 15 }}>
         {opcije.map((x) => {
           return (
-            <TouchableOpacity key={`t${x.id}`} style={styles.opcija}>
+            <TouchableOpacity
+              key={`t${x.id}`}
+              style={styles.opcija}
+              onPress={x.onPress}
+            >
               <View style={{ flexDirection: "row" }}>
                 <View style={styles.circle}>{x.slika}</View>
                 <Text style={styles.text} key={`tt${x.id}`}>
@@ -86,13 +99,7 @@ const SettingsScreen = ({ navigation }) => {
       </ScrollView>
       {/* za bottom meni */}
       <View style={{ position: "absolute", bottom: 0 }}>
-        <MenuBar
-          homeAction={() => console.log("home")}
-          menuAction={() => console.log("menu")}
-          addAction={() => console.log("add")}
-          friendAction={() => console.log("friend")}
-          settigsAction={() => console.log("settings")}
-        ></MenuBar>
+        <MenuBar navigation={navigation}></MenuBar>
       </View>
     </View>
   );

@@ -32,11 +32,7 @@ const MapScreen = ({ navigation }) => {
       {/* za bottom meni */}
       <View style={{ position: "absolute", bottom: 0 }}>
         <MenuBar
-          homeAction={() => console.log("home")}
-          menuAction={() => console.log("menu")}
-          addAction={() => console.log("add")}
-          friendAction={() => console.log("friend")}
-          settigsAction={() => console.log("settings")}
+          navigation={navigation}
         ></MenuBar>
       </View>
     </View>
