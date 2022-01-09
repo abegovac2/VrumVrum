@@ -14,7 +14,7 @@ import Menu from "../svg/menu-svgrepo-com (1).svg";
 
 const colors = require("../color/colors.json");
 
-const HomeScreen = ({ navigation }) => {
+const MapScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={[styles.search, {zIndex: 1}]}>
@@ -93,4 +93,4 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
-export default HomeScreen;
+export default MapScreen;

@@ -6,11 +6,12 @@ import Verification from './app/screens/VerificationScreen';
 import Start from './app/screens/StartScreen';
 import Login from './app/screens/LoginScreen';
 import Map from './app/screens/MapScreen';
+import Settings from './app/screens/SettingsScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Map></Map>
+      <Settings></Settings>
     </View>
   );
 }
