@@ -15,7 +15,7 @@ import Help from './app/screens/HelpScreen';
 export default function App() {
   return (
     <View style={styles.container}>
-      <CurrentDrive/>
+      <Help/>
     </View>
   );
 }
