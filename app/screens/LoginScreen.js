@@ -6,6 +6,7 @@ import {
   View,
   TextInput,
 } from "react-native";
+import BlackButton from "../elements/BlackButton";
 
 import Facebook from "../svg/facebook-svgrepo-com.svg";
 const colors = require("../color/colors.json");
@@ -36,17 +37,9 @@ const HomeScreen = ({ navigation }) => {
         </View>
 
         <View style={{ flex: 3 }}>
-          <View style={[styles.dugme, styles.crnoD]}>
-            <TouchableOpacity>
-              <Text style={{ color: colors.secondaryColor }}>Login</Text>
-            </TouchableOpacity>
-          </View>
+          <BlackButton content={"Login"}></BlackButton>
           <Text style={{ textAlign: "center", padding: 5 }}>Nemate račun?</Text>
-          <View style={[styles.dugme, styles.crnoD]}>
-            <TouchableOpacity>
-              <Text style={{ color: colors.secondaryColor }}>Prijavite se</Text>
-            </TouchableOpacity>
-          </View>
+          <BlackButton content={"Prijavite se"}></BlackButton>
           <View style={[styles.dugme, styles.bijeloD , {alignItems: "flex-start"}]}>
             <TouchableOpacity
               style={{
@@ -78,9 +71,6 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     margin: 3,
-  },
-  crnoD: {
-    backgroundColor: colors.black,
   },
   bijeloD: {
     borderColor: colors.black,

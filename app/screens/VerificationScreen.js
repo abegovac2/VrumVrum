@@ -6,6 +6,7 @@ import {
   View,
   TextInput,
 } from "react-native";
+import BlackButton from "../elements/BlackButton";
 
 import CarImage from "../svg/undraw_city_driver_re_0x5e.svg";
 const colors = require("../color/colors.json");
@@ -28,13 +29,7 @@ const VerificationScreen = ({ navigation }) => {
             keyboardType={"decimal-pad"}
           ></TextInput>
           <View>
-            <View style={[styles.dugme, styles.crnoD]}>
-              <TouchableOpacity>
-                <Text style={{ color: colors.secondaryColor }}>
-                  Pošalji Kod
-                </Text>
-              </TouchableOpacity>
-            </View>
+            <BlackButton content={"Pošalji kod"}></BlackButton>
             <View style={[styles.dugme, styles.bijeloD]}>
               <TouchableOpacity>
                 <Text>Ponovo slanje na broj</Text>
@@ -85,9 +80,6 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     margin: 3,
-  },
-  crnoD: {
-    backgroundColor: colors.black,
   },
   bijeloD: {
     borderColor: colors.black,
