@@ -21,6 +21,16 @@ const opcije = [
   { id: 3, auto: "Honda Civic", vozac: "Admir Ihrijarević" },
   { id: 4, auto: "Hyundai Tucson", vozac: "Evelin Piljug" },
   { id: 5, auto: "Rolls-Royce", vozac: "Amira Kunalić" },
+  { id: 6, auto: "Toyota Camry", vozac: "Hamza Isić" },
+  { id: 7, auto: "Volskwagen Polo", vozac: "Adnan Hodžić" },
+  { id: 8, auto: "Honda Civic", vozac: "Admir Ihrijarević" },
+  { id: 9, auto: "Hyundai Tucson", vozac: "Evelin Piljug" },
+  { id: 10, auto: "Rolls-Royce", vozac: "Amira Kunalić" },
+  { id: 11, auto: "Toyota Camry", vozac: "Hamza Isić" },
+  { id: 12, auto: "Volskwagen Polo", vozac: "Adnan Hodžić" },
+  { id: 13, auto: "Honda Civic", vozac: "Admir Ihrijarević" },
+  { id: 14, auto: "Hyundai Tucson", vozac: "Evelin Piljug" },
+  { id: 15, auto: "Rolls-Royce", vozac: "Amira Kunalić" },
 ];
 
 const DriversScreen = ({ navigation }) => {
@@ -30,7 +40,7 @@ const DriversScreen = ({ navigation }) => {
         <Text style={{ fontSize: 20, fontWeight: "bold", color: colors.white }}>
           Vožnje u blizini
         </Text>
-        <View style={{flexDirection: "row"}}>
+        <View style={{ flexDirection: "row" }}>
           <TouchableOpacity style={styles.izaberi}>
             <Plus width={20} height={20} />
           </TouchableOpacity>
@@ -40,52 +50,60 @@ const DriversScreen = ({ navigation }) => {
         </View>
       </View>
       <View
-        style={styles.izaberiVozaca}
-      >
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Odabir vozača</Text>
-      </View>
-      <ScrollView
         style={{
-          flex: 0.5,
-          width: "90%",
-          marginLeft: 15,
-          marginTop: 15,
-          marginBottom: 75,
+          padding: 15,
+          height: "80%",
+          borderTopRightRadius: 60,
+          borderTopLeftRadius: 60,
+          backgroundColor: colors.secondaryColor,
         }}
       >
-        {opcije.map((x) => {
-          return (
-            <TouchableOpacity key={`t${x.id}`} style={styles.opcija}>
-              <View style={{ justifyContent: "space-between" }}>
-                <Text>{`${x.auto}`}</Text>
-                <Text style={{ color: colors.black }}>{`${x.vozac}`}</Text>
-                <Text style={{ color: colors.primaryColor }}>Dostupan!</Text>
-              </View>
-              <View style={{ height: "100%", padding: 10, paddingEnd: 0 }}>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    justifyContent: "space-around",
-                    height: "100%",
-                  }}
-                >
-                  <Clock width={20} height={20} />
-                  <Text>{` ${x.id} Min`}</Text>
+        <View style={styles.izaberiVozaca}>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            Odabir vozača
+          </Text>
+        </View>
+        <ScrollView
+          style={{
+            width: "90%",
+            marginLeft: 15,
+            marginTop: 15,
+          }}
+        >
+          {opcije.map((x) => {
+            return (
+              <TouchableOpacity key={`t${x.id}`} style={styles.opcija}>
+                <View style={{ justifyContent: "space-between" }}>
+                  <Text>{`${x.auto}`}</Text>
+                  <Text style={{ color: colors.black }}>{`${x.vozac}`}</Text>
+                  <Text style={{ color: colors.primaryColor }}>Dostupan!</Text>
                 </View>
-                <View
-                  style={{
-                    borderRadius: 50,
-                    backgroundColor: colors.primaryColor,
-                    width: 20,
-                  }}
-                >
-                  <Check width={20} height={20} />
+                <View style={{ height: "100%", padding: 10, paddingEnd: 0 }}>
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      justifyContent: "space-around",
+                      height: "100%",
+                    }}
+                  >
+                    <Clock width={20} height={20} />
+                    <Text>{` ${x.id} Min`}</Text>
+                  </View>
+                  <View
+                    style={{
+                      borderRadius: 50,
+                      backgroundColor: colors.primaryColor,
+                      width: 20,
+                    }}
+                  >
+                    <Check width={20} height={20} />
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
-          );
-        })}
-      </ScrollView>
+              </TouchableOpacity>
+            );
+          })}
+        </ScrollView>
+      </View>
       {/* za bottom meni */}
       <View style={{ position: "absolute", bottom: 0 }}>
         <MenuBar
@@ -106,7 +124,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     alignItems: "center",
-    backgroundColor: colors.secondaryColor,
+    backgroundColor: colors.primaryColor,
   },
   header: {
     backgroundColor: colors.primaryColor,
@@ -115,14 +133,13 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingTop: 60,
     paddingBottom: 20,
-    borderBottomLeftRadius: 50,
   },
   opcija: {
     flexDirection: "row",
     width: "90%",
-    height: "20%",
+    height: 100,
     backgroundColor: colors.lightGray,
-    padding: 30,
+    padding: 25,
     borderLeftWidth: 10,
     borderLeftColor: colors.primaryColor,
     justifyContent: "space-between",
@@ -142,8 +159,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  izaberi:{
-      padding: 10
+  izaberi: {
+    padding: 10,
   },
   izaberiVozaca: {
     backgroundColor: colors.primaryColor,
