@@ -5,6 +5,7 @@ import {
   Text,
   View,
   TextInput,
+  Image,
 } from "react-native";
 import BlackButton from "../elements/BlackButton";
 
@@ -14,7 +15,8 @@ const colors = require("../color/colors.json");
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={{ flex: 1, padding: 50 }}>Logo</Text>
+      <Image style={styles.logo} source={require("../image/logo.png")} />
+      {/*<Text style={{ flex: 1, padding: 50 }}>Logo</Text>*/}
       <Text style={{ flex: 0.5, fontSize: 30, fontWeight: "bold", padding: 5 }}>
         Login
       </Text>
@@ -40,16 +42,20 @@ const HomeScreen = ({ navigation }) => {
           <BlackButton content={"Login"}></BlackButton>
           <Text style={{ textAlign: "center", padding: 5 }}>Nemate račun?</Text>
           <BlackButton content={"Prijavite se"}></BlackButton>
-          <View style={[styles.dugme, styles.bijeloD , {alignItems: "flex-start"}]}>
+          <View
+            style={[styles.dugme, styles.bijeloD, { alignItems: "flex-start" }]}
+          >
             <TouchableOpacity
               style={{
                 flexDirection: "row",
               }}
             >
-              <View >
+              <View>
                 <Facebook width={20} height={20} />
               </View>
-              <Text style={{textAlign: "center", width: "90%"}}>Prijavite se sa Facebook</Text>
+              <Text style={{ textAlign: "center", width: "90%" }}>
+                Prijavite se sa Facebook
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -90,6 +96,10 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 10,
     borderRadius: 10,
+  },
+  logo: {
+    width: "60%",
+    height: "30%",
   },
 });
 export default HomeScreen;
