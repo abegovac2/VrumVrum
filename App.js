@@ -7,11 +7,12 @@ import Start from './app/screens/StartScreen';
 import Login from './app/screens/LoginScreen';
 import Map from './app/screens/MapScreen';
 import Settings from './app/screens/SettingsScreen';
+import Help from './app/screens/HelpScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Settings></Settings>
+      <Help></Help>
     </View>
   );
 }
