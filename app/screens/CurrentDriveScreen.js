@@ -58,11 +58,11 @@ const CurrentDriveScreen = ({ navigation }) => {
             color={colors.primaryColor}
           />
         </View>
-        <Image style={styles.graf} source={require("../image/slika123.png")} />
-        <Text style={{ fontSize: 15, padding: 4, fontWeight: "bold" }}>
+        {/*<Text style={{ fontSize: 15, padding: 4, fontWeight: "bold" }}>
           Prosječe dužine Vaših posljednjih vožnji
-        </Text>
-        <Image style={styles.graf} source={require("../image/slika123.png")} />
+            </Text>*/}
+        <Image style={styles.graf2} source={require("../image/graf2.png")} />
+        <Image style={styles.graf1} source={require("../image/graf1.png")} />
       </View>
       {/* za bottom meni */}
       <View style={{ position: "absolute", bottom: 0 }}>
@@ -121,8 +121,17 @@ const styles = StyleSheet.create({
     margin: 10,
     alignItems: "center",
   },
-  graf:{
-      alignSelf: "center"
-  }
+  graf1:{
+      alignSelf: "center",
+      width:"90%",
+      height: "20%",
+      margin: 20,
+  },
+  graf2:{
+    alignSelf: "center",
+    width:"90%",
+    height: "32%",
+    margin: 20,
+}
 });
 export default CurrentDriveScreen;
