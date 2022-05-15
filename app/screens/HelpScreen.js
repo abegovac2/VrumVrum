@@ -32,7 +32,7 @@ const HelpScreen = ({ navigation }) => {
         </View>
       </View>
 
-      <View style={ {width: "90%"} }>
+      <View style={{ width: "90%" }}>
 
         <View style={{ alignSelf: "center" }}>
           <Info width={300} height={200} />

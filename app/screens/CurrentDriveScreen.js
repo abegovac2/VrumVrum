@@ -121,17 +121,17 @@ const styles = StyleSheet.create({
     margin: 10,
     alignItems: "center",
   },
-  graf1:{
-      alignSelf: "center",
-      width:"90%",
-      height: "20%",
-      margin: 20,
-  },
-  graf2:{
+  graf1: {
     alignSelf: "center",
-    width:"90%",
+    width: "90%",
+    height: "20%",
+    margin: 20,
+  },
+  graf2: {
+    alignSelf: "center",
+    width: "90%",
     height: "32%",
     margin: 20,
-}
+  }
 });
 export default CurrentDriveScreen;

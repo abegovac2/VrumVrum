@@ -16,7 +16,7 @@ const VerificationScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.zaglavlje}>
-        <TouchableOpacity navigation={navigation}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Back width={20} height={20} color={colors.black}></Back>
         </TouchableOpacity>
         <Text style={styles.text}>Verifikacija računa</Text>

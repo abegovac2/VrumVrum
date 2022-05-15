@@ -27,6 +27,11 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
+      "config":{
+        "googleMaps":{
+          "apyKey": ""
+        } 
+      },
       "package": "com.tim10.VrumVrum",
       "versionCode": 1
     },
